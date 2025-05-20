@@ -6,7 +6,7 @@ import MainChat from "./mainChat";
 const main = () => {
   return (
     <div className="flex justify-center">
-      <div className="flex flex-col h-full w-[100vh] bg-green-400 justify-between">
+      <div className="flex flex-col h-full w-[85vh] justify-between">
         <MainChat />
         <InputsChat />
       </div>

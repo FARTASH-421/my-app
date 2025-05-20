@@ -5,7 +5,7 @@ const sidebar = () => {
     <>
       <div>
         <div></div>
-        <div></div>
+        <div> static</div>
       </div>
     </>
   );
