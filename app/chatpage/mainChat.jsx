@@ -2,7 +2,7 @@ import React from "react";
 
 const mainChat = () => {
   return (
-    <div className="w-full p-2 h-full overflow-y-auto scroll-m-40">
+    <div className="w-full p-2 h-full overflow-y-auto">
       <div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, nobis
         dicta expedita consequatur, reiciendis quos quisquam maxime natus saepe

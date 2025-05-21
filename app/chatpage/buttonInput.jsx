@@ -1,6 +1,5 @@
 import React from "react";
-import { FaMicrophone, FaPaperPlane } from "react-icons/fa"; // Import specific icons
-import { GoArrowUp } from "react-icons/go";
+import { FaMicrophone, FaArrowUp, FaPaperPlane } from "react-icons/fa"; // Import specific icons
 import { GrAdd } from "react-icons/gr";
 
 const ButtonInput = ({ name }) => {
@@ -9,11 +8,19 @@ const ButtonInput = ({ name }) => {
     bt1: <GrAdd className="text-white text-2xl" />,
     bt2: <FaPaperPlane className="text-white text-xl" />,
     bt3: <FaMicrophone className="text-white text-xl" />,
-    bt4: <GoArrowUp className="text-white text-xl font-bold" />,
+    bt4: <FaArrowUp className="text-white text-xl font-bold" />,
   };
 
+  const clickHandaler = () => {
+    if (iconMap[name] === "bt1") {
+      console.log("Hello");
+    }   
+  };
   return (
-    <div className="bg-black text-white size-10 text-center p-1 rounded-full flex items-center justify-center hover:cursor-pointer">
+    <div
+      className="bg-gray-500   size-10 text-center p-1 rounded-full flex items-center justify-center hover:cursor-pointer hover:bg-gray-800"
+      onClick={clickHandaler}
+    >
       {iconMap[name] || <span>{name}</span>}
     </div>
   );
