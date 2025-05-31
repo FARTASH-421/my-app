@@ -11,15 +11,11 @@ const ButtonInput = ({ name }) => {
     bt4: <FaArrowUp className="text-white text-xl font-bold" />,
   };
 
-  const clickHandaler = () => {
-    if (iconMap[name] === "bt1") {
-      console.log("Hello");
-    }   
-  };
+
   return (
     <div
       className="bg-gray-500   size-10 text-center p-1 rounded-full flex items-center justify-center hover:cursor-pointer hover:bg-gray-800"
-      onClick={clickHandaler}
+      
     >
       {iconMap[name] || <span>{name}</span>}
     </div>

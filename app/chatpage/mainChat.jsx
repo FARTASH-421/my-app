@@ -1,6 +1,6 @@
-import React from "react";
-
-const mainChat = () => {
+import React, { useState } from "react";
+// text = "";
+const mainChat = ({ response }) => {
   return (
     <div className="w-full p-2 h-full overflow-y-auto">
       <div>
@@ -116,6 +116,10 @@ const mainChat = () => {
         recusandae ipsam porro, iusto eaque impedit, voluptate iure similique
         dolor quis ullam praesentium veritatis dolorum cum vero aspernatur
         reiciendis?
+      </div>
+      <div className="p-2 m-2 ">
+        <h1 className="font-bold text-2xl">output: </h1>
+        <h2 className="text-xl mx-10 text-blue-800">{response}</h2>
       </div>
     </div>
   );
