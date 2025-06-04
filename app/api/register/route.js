@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    await connectionToDatabase("Products");
+    await connectionToDatabase("Users");
     const { userName, userEmail, userPassword } = await request.json();
     const time = new Date();
     const newUser = new User({
@@ -23,6 +23,7 @@ export async function POST(request) {
       { status: 201 }
     );
   } catch (error) {
-    console.log(error);
+    console.error("Register error:", error);
+    return NextResponse.json({ message: "Register failed" }, { status: 500 });
   }
 }

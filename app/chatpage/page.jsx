@@ -1,9 +1,9 @@
 // 'use clinet'
 import { GrFormDown } from "react-icons/gr";
 import React from "react";
-import Sidebar from "./sidebar";
-import Main from "./main";
-import ProfileChat from "./profileChat";
+import Sidebar from "./Compenets/sidebar";
+import Main from "./Compenets/main";
+import ProfileChat from "./Compenets/profileChat";
 const chatPage = () => {
   return (
     <div className="h-screen w-screen fixed">
@@ -22,7 +22,7 @@ const chatPage = () => {
               </button>
             </div>
           </div>
-          <div className=" h-full w-full flex justify-center">
+          <div className="h-full w-full flex justify-center overflow-y-auto">
             <Main />
           </div>
         </div>

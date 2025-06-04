@@ -27,6 +27,7 @@ const LoginPage = () => {
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("userData", JSON.stringify(data.user));
         alert(data.message);
+
         route.push("/");
       } else {
         alert("Error! Please try again");

@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import HeaderSide from "./component/header";
 import FooterSide from "./component/footer";
 import { useEffect, useState } from "react";
-
 export default function Page() {
   const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -39,7 +38,9 @@ export default function Page() {
             ) : (
               <h1 className=" text-4xl p-4 rounded-2xl bg-blue-200 text-red-600 ">
                 If you want to use{" "}
-                <span className="text-black text-5xl italic font-bold">chat bot</span>{" "}
+                <span className="text-black text-5xl italic font-bold">
+                  chat bot
+                </span>{" "}
                 please login in to website...
               </h1>
             )}

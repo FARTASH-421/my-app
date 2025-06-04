@@ -4,7 +4,7 @@ import User from "@/models/User";
 
 export async function POST(request) {
   try {
-    await connectionToDatabase("Products");
+    await connectionToDatabase("Users");
     const { email, password } = await request.json();
     console.log(email + " " + password);
 
@@ -35,6 +35,27 @@ export async function POST(request) {
     );
   } catch (error) {
     console.error("Login error:", error);
-    // return NextResponse.json({ message: "Login failed" }, { status: 500 });
+    return NextResponse.json({ message: "Login failed" }, { status: 500 });
+  }
+}
+
+// Handle GET request (Get all users)
+export async function GET() {
+  try {
+    await connectionToDatabase("Users");
+    console.log("------------ connection");
+
+    // Fetch all users (exclude password)
+    const users = await User.find({}, { userPassword: 0 });
+
+    return NextResponse.json(JSON.stringify({ success: true, data: users }), {
+      status: 200,
+    });
+  } catch (error) {
+    console.error("Error fetching users:", error);
+    return NextResponse.json(
+      JSON.stringify({ success: false, message: "Server Error" }),
+      { status: 500 }
+    );
   }
 }
