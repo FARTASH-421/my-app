@@ -7,5 +7,5 @@ const userSchema = new mongoose.Schema({
   time: { type: String },
 });
 
-// ✅ Fix model hot-reloading in Next.js
+//  Fix model hot-reloading in Next.js
 export default mongoose.models.User || mongoose.model("User", userSchema);

@@ -28,13 +28,13 @@ const logOutPage = () => {
           <div className="flex items-center justify-between flex-row gap-5 ">
             <button
               onClick={handlerNo}
-              className="bg-red-300 px-10 py-2 text-xl rounded-4xl border-2 border-black hover:bg-red-500"
+              className="bg-red-300 px-10 py-2 text-xl rounded-4xl border-2 border-black hover:bg-red-400"
             >
               No
             </button>
             <button
               onClick={handlerYes}
-              className="bg-green-400 px-10 py-2 text-xl rounded-4xl border-2 border-black hover:bg-green-500"
+              className="bg-amber-200 px-10 py-2 text-xl rounded-4xl border-2 border-black hover:bg-amber-400"
             >
               Yse
             </button>

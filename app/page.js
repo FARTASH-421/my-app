@@ -14,6 +14,7 @@ export default function Page() {
       setIsLoggedIn(true); // Update state
     }
   }, []);
+  
   const handelerClick = () => {
     router.push("/chatpage");
   };

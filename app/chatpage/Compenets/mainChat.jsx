@@ -34,7 +34,7 @@ const MainChat = ({ messages }) => {
               <div
                 className={`max-w px-4 py-2 flex flex-col rounded-lg break-words whitespace-pre-wrap ${
                   msg.sender === "user"
-                    ? "bg-amber-50 text-black max-w-[95%]"
+                    ? "bg-amber-100 text-black max-w-[95%]"
                     : "bg-gray-100 text-gray-800 max-w-[95%]"
                 }`}
               >
@@ -44,16 +44,16 @@ const MainChat = ({ messages }) => {
             {!(msg.sender === "user") ? (
               <div className="flex flex-wrap p-2">
                 <div className="hover:bg-gray-200 py-1 px-2 rounded hover:cursor-pointer">
-                  <GoCopy className="text-xl" />
+                  <GoCopy className="text-l" />
                 </div>
                 <div className="hover:bg-gray-200 hover:cursor-pointer py-1 px-2 rounded">
-                  <AiOutlineLike className="text-2xl" />
+                  <AiOutlineLike className="text-xl" />
                 </div>
                 <div className="hover:bg-gray-200 hover:cursor-pointer py-1 px-2 rounded">
-                  <AiOutlineDislike className="text-2xl" />
+                  <AiOutlineDislike className="text-xl" />
                 </div>
                 <div className="hover:cursor-pointer hover:bg-gray-200 rounded py-1 px-2">
-                  <FaShareFromSquare className="text-xl" />
+                  <FaShareFromSquare className="text-l" />
                 </div>
               </div>
             ) : (

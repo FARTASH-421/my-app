@@ -1,6 +1,6 @@
 "use client";
 
-import React, { use, useState } from "react";
+import React, { useEffect, useState } from "react";
 // import HeaderChat from "./headerChat";
 import InputsChat from "./inputsChat";
 import MainChat from "./mainChat";
@@ -8,6 +8,12 @@ import axios from "axios";
 import { data } from "autoprefixer";
 
 const Main = () => {
+  // const loginFlag = localStorage.getItem("isLoggedIn"); //  Check localStorage
+  // console.log(loginFlag);
+  // useEffect(() => {
+  //   if (loginFlag === "null") return <h1> You shod log in</h1>;
+  // }, []);
+
   const [messages, setMessages] = useState([
     { sender: "bot", text: "Hello! How can I help you today?" },
   ]);

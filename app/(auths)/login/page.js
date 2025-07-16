@@ -11,7 +11,7 @@ const LoginPage = () => {
 
   const handlerSubnit = async (e) => {
     e.preventDefault();
-    // console.log(email + " " + password);
+
     try {
       const respos = await axios.post("./../../api/login", {
         email,
