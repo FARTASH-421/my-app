@@ -70,7 +70,7 @@ const SignUpPage = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("../../api/register", {
+      const response = await axios.post("/api/register", {
         userName: formData.userName,
         userEmail: formData.userEmail,
         userPassword: formData.userPassword,

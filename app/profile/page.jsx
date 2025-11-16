@@ -190,7 +190,7 @@ const UserProfilePage = () => {
     setIsChangingPassword(true);
 
     try {
-      const response = await axios.put("../api/user/change-password", {
+      const response = await axios.put("/api/user/change-password", {
         userId: userData._id,
         currentPassword: passwordData.currentPassword,
         newPassword: passwordData.newPassword,
