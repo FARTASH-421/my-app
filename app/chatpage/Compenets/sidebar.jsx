@@ -19,8 +19,8 @@ import {
 export default function Component() {
   return (
     <Sidebar
-      aria-label="Sidebar with multi-level dropdown example"
-      className="w-full h-full bg-red-400 p-2"
+      // aria-label="Sidebar with multi-level dropdown example"
+      className="w-full h-full p-2"
     >
       <SidebarItems className="p-2 h-full">
         <SidebarItemGroup className="flex flex-col justify-between h-full">

@@ -3,11 +3,12 @@
 import { GoCopy } from "react-icons/go";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { FaShareFromSquare } from "react-icons/fa6";
 
 const MainChat = ({ messages }) => {
   const messagesEndRef = useRef(null);
+  const [copiedIndex, setCopiedIndex] = useState(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -16,6 +17,19 @@ const MainChat = ({ messages }) => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  const copyToClipboard = (text, index) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        setCopiedIndex(index);
+        // Reset the copied state after 2 seconds
+        setTimeout(() => setCopiedIndex(null), 2000);
+      })
+      .catch((err) => {
+        console.error("Failed to copy: ", err);
+      });
+  };
 
   return (
     <div className="w-full p-2 h-full">
@@ -42,9 +56,20 @@ const MainChat = ({ messages }) => {
               </div>
             </div>
             {!(msg.sender === "user") ? (
-              <div className="flex flex-wrap p-2">
-                <div className="hover:bg-gray-200 py-1 px-2 rounded hover:cursor-pointer">
+              <div className="flex flex-wrap p-2 items-center">
+                <div
+                  className="hover:bg-gray-200 py-1 px-2 rounded hover:cursor-pointer relative"
+                  onClick={() => copyToClipboard(msg.text, index)}
+                >
                   <GoCopy className="text-l" />
+                  {copiedIndex === index && (
+                    <span
+                      className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-green-500
+                     text-white text-sm px-4 py-2 rounded"
+                    >
+                      Copied!
+                    </span>
+                  )}
                 </div>
                 <div className="hover:bg-gray-200 hover:cursor-pointer py-1 px-2 rounded">
                   <AiOutlineLike className="text-xl" />

@@ -2,6 +2,7 @@ import React from "react";
 import { GrMoreVertical } from "react-icons/gr";
 import { RiShare2Line } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
+import Link from "next/link";
 
 const profileChat = () => {
   return (
@@ -18,7 +19,9 @@ const profileChat = () => {
             <GrMoreVertical className="text-2xl text-center" />
           </div>
           <div className="p-2 hover:bg-blue-400 rounded-full">
-            <CgProfile className="text-3xl text-center" />
+            <Link href={"/profile"}>
+              <CgProfile className="text-3xl text-center" />
+            </Link>
           </div>
         </div>
       </div>

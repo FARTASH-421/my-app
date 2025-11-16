@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import connectionToDatabase from "@/lib/mongoose";
+import connectToDatabase from "@/lib/mongoose";
 import User from "@/models/User";
 
 export async function POST(request) {
   try {
-    await connectionToDatabase("Users");
+    await connectToDatabase();
     const { email, password } = await request.json();
     console.log(email + " " + password);
 
@@ -42,7 +42,7 @@ export async function POST(request) {
 // Handle GET request (Get all users)
 export async function GET() {
   try {
-    await connectionToDatabase("Users");
+    await connectToDatabase();
     console.log("------------ connection");
 
     // Fetch all users (exclude password)
