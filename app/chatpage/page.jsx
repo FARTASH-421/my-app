@@ -16,7 +16,7 @@ const chatPage = () => {
           <div className="relative">
             <div className=" absolute top-0 left-0">
               <button className="group relative text-[1.2rem] px-4 py-2 cursor-pointer hover:bg-gray-100 m-2 hover:rounded-xl flex gap-2 justify-center items-center">
-                ChatGPT
+                NEX AI
                 <GrFormDown className="text-center text-black" />
                 <div className=" absolute top-full right-0 rounded-2xl p-3 mt-1 shadow-md flex flex-col gap-2 justify-center w-full bg-gray-100 scale-0 group-focus:scale-100">
                   <Link

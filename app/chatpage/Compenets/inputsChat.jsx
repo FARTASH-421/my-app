@@ -187,7 +187,7 @@ export default function InputsChat({
         </div>
       </div>
       <div className="h-1/4 flex justify-center items-center text-center text-sm">
-        <p>ChatGPT can make mistakes. Check important info.</p>
+        <p>NexAI can make mistakes. Check important info.</p>
         {isRecording && (
           <div className="ml-4 flex items-center text-red-600">
             <div className="w-2 h-2 bg-red-600 rounded-full animate-pulse mr-1"></div>
@@ -198,3 +198,5 @@ export default function InputsChat({
     </div>
   );
 }
+
+
